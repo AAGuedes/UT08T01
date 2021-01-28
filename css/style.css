@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3498DB;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+.gameScenario {
+  display: grid;
+  grid-template-areas: "menu menu map" "draggables draggables map" "droppables droppables map" "droppables droppables map" "charts charts charts";
+}
+
+.gameScenario .gameMenu {
+  grid-area: menu;
+  display: flex;
+  justify-content: space-between;
+  background-color: #AED6F1;
+  padding: 0.5em 1em 0.5em 1em;
+  height: 50px;
+}
+
+.gameScenario .gameMenu div {
+  color: #3498DB;
+  font-weight: bold;
+  font-size: large;
+  align-self: center;
+}
+
+.gameScenario .gameMenu .newGame {
+  border: 2px solid #3498DB;
+  border-radius: 1em;
+  color: #3498DB;
+  font-weight: bold;
+  font-size: large;
+  background-color: white;
+  padding: 0.5em 1.5em 0.5em;
+  cursor: pointer;
+}
+
+.gameScenario .gameMenu .newGame:hover:enabled {
+  background-color: #ECF0F1;
+}
+
+.gameScenario .gameMenu .newGame:focus {
+  outline: none;
+  color: #ECF0F1;
+  background-color: #3498DB;
+  border: 2px solid #ECF0F1;
+}
+
+.gameScenario .gameMenu .newGame:disabled {
+  color: grey;
+  border: 2px solid grey;
+  cursor: default;
+}
+
+.gameScenario #draggables {
+  grid-area: draggables;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.gameScenario #droppables {
+  grid-area: droppables;
+  border-top: 1px dotted #1F618D;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.gameScenario #droppables .country {
+  border: 1px solid #1F618D;
+  border-radius: 0.5em;
+}
+
+.gameScenario #droppables .country h3 {
+  text-align: center;
+  color: blue;
+  background-color: #ECF0F1;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.gameScenario #mapid {
+  grid-area: map;
+  width: 540px;
+  height: 360px;
+}
+
+#charts {
+  grid-area: charts;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.droppable {
+  border-top: 1px solid #1F618D;
+  height: 75px;
+  width: 150px;
+}
+
+.draggable > * {
+  border: 1px solid grey;
+  border-radius: 0.5em;
+  background-color: #ECF0F1;
+  color: blue;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.country > div > h3 {
+  padding: 1em;
+}
+
+.success {
+  background-color: #ABEBC6;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ut08t01_arteagaguedesairam",
+  "version": "1.0.0",
+  "description": "UT08T01: Actividad Evaluable - Ciudades y Países",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Airam Arteaga Guedes",
+  "license": "ISC"
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/leaflet-1.7.1/leaflet.css">
+    <title>UT08T01 - Ciudades y Paises</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ciudades y Países</h1>
+    </header>
+    <main>
+        <div class="game">
+            <div class="gameScenario">
+                <div class="gameMenu">
+                    <button class="newGame">Nueva Partida</button>
+                    <div>Tiempo: <span class="timer">0</span></div>
+                </div>
+                <div id="draggables"></div>
+                <div id="droppables"></div>    
+                <div id="mapid"></div>
+            </div>
+        </div>
+        <div id="charts">
+            <div id="lineChart">
+
+            </div>
+            <div id="pieChart">
+            
+            </div>    
+        </div>
+    </main>
+
+    <!-- TEMPLATES -->
+    <template class="city-template">
+        <div>
+            <h3></h3>
+        </div>
+    </template>
+
+    <template class="country-template">
+        <div>
+            <div>
+                <h3></h3>
+            </div>
+            <div>
+            </div>
+        </div>
+    </template>
+
+    <!-- JQuery -->
+    <script src="libs/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <!-- JQuery UI-->
+    <script src="libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!-- Leaflet -->
+    <script src="libs/leaflet-1.7.1/leaflet.js"></script>
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Main javascript-->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
