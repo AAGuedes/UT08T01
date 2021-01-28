@@ -1,5 +1,5 @@
 // Variables globales
-$dark-blue: #1F618D
+$dark-blue: #2E86C1
 $medium-blue: #3498DB
 $light-blue: #AED6F1
 $light-grey: #ECF0F1
@@ -10,96 +10,90 @@ $pale-green: #ABEBC6
     margin: 0
     padding: 0
 
-// HEADER
 header
     background-color: $medium-blue
     color: white
     padding: 1em
     text-align: center
 
-// GAME SCENARIO
-.gameScenario
-    display: grid
-    grid-template-areas: "menu menu map" "draggables draggables map" "droppables droppables map" "droppables droppables map" "charts charts charts"
-    .gameMenu
-        grid-area: menu
-        display: flex
-        justify-content: space-between
-        background-color: $light-blue
-        padding: 0.5em 1em 0.5em 1em
-        height: 50px
-        div
-            color: $medium-blue
-            font-weight: bold
-            font-size: large
-            align-self: center
-        .newGame
-            border: 2px solid $medium-blue
-            border-radius: 1em
-            color: $medium-blue
-            font-weight: bold
-            font-size: large
-            background-color: white
-            padding: 0.5em 1.5em 0.5em
-            cursor: pointer
-        .newGame:hover:enabled
-            background-color: $light-grey
-        .newGame:focus
-            outline: none
-            color: $light-grey
-            background-color: $medium-blue
-            border: 2px solid $light-grey
-        .newGame:disabled
-            color: $dark-grey
-            border: 2px solid $dark-grey
-            cursor: default
-    #draggables
-        grid-area: draggables
-        display: flex
-        justify-content: space-around
-        padding: 2em
-    #droppables
-        grid-area: droppables
-        border-top: 1px dotted $dark-blue
-        display: flex
-        justify-content: space-around
-        padding: 2em
-        .country
-            border: 1px solid $dark-blue
-            border-radius: 0.5em
-            h3
-                text-align: center
-                color: blue
+.game
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    .gameScenario
+        flex-direction: column
+        flex-grow: 1
+        .gameMenu
+            display: flex
+            justify-content: space-between
+            background-color: $light-blue
+            padding: 0.5em 1em 0.5em 1em
+            border-bottom: 1px solid $light-grey
+            div
+                color: $medium-blue
+                font-weight: bold
+                font-size: large
+                align-self: center
+            .newGame
+                border: 2px solid $medium-blue
+                border-radius: 1em
+                color: $medium-blue
+                font-weight: bold
+                font-size: large
+                background-color: white
+                padding: 0.5em 1.5em 0.5em
+                cursor: pointer
+            .newGame:hover:enabled
                 background-color: $light-grey
-                border-radius: 0.5em 0.5em 0 0
-    #mapid
-        grid-area: map
-        width: 540px
-        height: 360px
+            .newGame:focus
+                outline: none
+                color: $light-grey
+                background-color: $medium-blue
+                border: 2px solid $light-grey
+            .newGame:disabled
+                color: $dark-grey
+                border: 2px solid $dark-grey
+                cursor: default
+        #draggables
+            display: flex
+            height: 125px
+            justify-content: space-around
+            align-items: center
+            .draggable
+                border: 2px solid $dark-blue
+                border-radius: 0.5em
+                background-color: $light-grey
+                color: $dark-blue
+                font-weight: bold
+                padding: 1em
+        #droppables
+            border-top: 2px dotted $medium-blue
+            display: flex
+            justify-content: space-around
+            padding: 1em 0
+            .country
+                border: 2px solid $dark-blue
+                border-radius: 0.5em
+                h3
+                    text-align: center
+                    color: $dark-blue
+                    background-color: $light-grey
+                    border-radius: 0.5em 0.5em 0 0
+                    padding: 1em
+                .droppable 
+                    border-top: 2px solid $dark-blue
+                    height: 75px
+                    width: 150px
+                .success
+                    background-color: $pale-green
+                    border-radius: 0 0 0.5em 0.5em
 
-// CHARTS
+    #mapid
+        height: 360px
+        width: 540px
+
 #charts
-    grid-area: charts
+    border-top: 2px solid $medium-blue
     display: flex
     flex-direction: row
     justify-content: space-around
-
-.droppable 
-    border-top: 1px solid $dark-blue
-    height: 75px
-    width: 150px
-
-
-.draggable > * 
-    border: 1px solid grey
-    border-radius: 0.5em
-    background-color: $light-grey
-    color: blue
-    font-weight: bold
-    padding: 1em
-
-.country > div > h3 
-    padding: 1em
-
-.success 
-    background-color: $pale-green
