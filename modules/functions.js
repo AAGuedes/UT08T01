@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 // Importaciones requeridas
-import { gameData } from '/resources/questions.js';
-import { mymap, marker } from '/modules/map.js';
-import { drawLineChart, drawPieChart } from '/modules/chart.js';
+import { gameData } from '../resources/questions.js';
+import { mymap, marker } from '../modules/map.js';
+import { drawLineChart, drawPieChart } from '../modules/chart.js';
 
 
 // Declaración de variables

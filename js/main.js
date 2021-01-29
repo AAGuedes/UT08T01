@@ -1,5 +1,5 @@
 // Importaciones requeridas
-import * as funcion from '/modules/functions.js';
+import * as funcion from '../modules/functions.js';
 
 // Controla el boton de nueva partida
 var newGameButton = document.getElementsByClassName('newGame')[0];

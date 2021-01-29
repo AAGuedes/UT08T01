@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { estadisticasTarta, estadisticasLinea } from '/modules/functions.js';
+import { estadisticasTarta, estadisticasLinea } from '../modules/functions.js';
 
 // Carga los charts
 google.charts.load('current', { 'packages': ['corechart'] });
